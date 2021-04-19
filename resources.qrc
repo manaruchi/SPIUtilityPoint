@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/spi" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

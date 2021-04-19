@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Manaruchi Mohapatra</author>
+ <class>SPIUtilityDialogBase</class>
+ <widget class="QDialog" name="SPIUtilityDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>899</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>899</width>
+    <height>489</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>899</width>
+    <height>489</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SPI Utility for Point Data</string>
+  </property>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>921</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(19, 202, 202, 255), stop:1 rgba(255, 255, 255, 255));
+padding-left: 20px;</string>
+   </property>
+   <property name="text">
+    <string>Standardized Precipitation Index Utility for Point Data</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar_1">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>460</y>
+     <width>481</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center
+}
+
+QProgressBar::chunk {
+    background-color: rgb(0, 255, 127);
+    width: 10px;
+    margin: 1px;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>391</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="locale">
+    <locale language="English" country="India"/>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>24</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Data Preparation</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Input Precipitation Data :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Input Precipitation Data Directory&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select the folder where precipitation data is stored. The detailed format for the precipitation data can be found in the documentation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>70</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Browse for folder..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Output Data Directory :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Output Data Directory&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select the folder where all the outputs of all the operatons perfromed via this plugin will be stored. The exact path of each operation output will be displayed in the log.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>150</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Browse for folder..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>320</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Check Data&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This option checks the presence of data in the user-provided Data Directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string>Load Data</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>320</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generate
+Composite</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>420</y>
+       <width>481</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>410</y>
+       <width>471</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>471</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>97</x>
+       <y>203</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>d/M/yyyy</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>209</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Date:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>SPI Calculation</string>
+    </attribute>
+    <widget class="QLabel" name="label_6">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>450</y>
+       <width>481</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Data Status&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Incomplete :&lt;/span&gt; Input parameters are not set. Complete the Data Preparation step.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Complete :&lt;/span&gt; Data Preparation is complete. The SPI can be generated now.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="text">
+      <string>Data Status : Incomplete</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_15">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>49</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>24</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Monthly composite file :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>171</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Time Scale : </string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_11">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>220</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>January</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>February</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>March</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>April</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>May</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>June</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>July</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>August</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>September</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>October</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>November</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>December</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_12">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>270</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>January</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>February</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>March</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>April</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>May</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>June</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>July</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>August</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>September</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>October</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>November</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>December</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>274</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>End Month : </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>227</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Month : </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>340</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generate SPI</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>116</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_16">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>116</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Output folder :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>440</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>440</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>440</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>164</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>164</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>174</x>
+       <y>170</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Accumulation Period:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>60</y>
+     <width>481</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Log</string>
+    </attribute>
+    <widget class="QTextEdit" name="textEdit_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>461</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Log&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Log displays the current activities and notes which will be useful while usng this plugin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QTextEdit::WidgetWidth</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Start with setting Input Precipitation Data Folder (Folder containing precipitation data in *.csv format)  and Output Folder. Then click on &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Check Data&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Note &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;: The format of data in the CSV file should be like the following:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;&quot; align=&quot;center&quot; cellspacing=&quot;2&quot; cellpadding=&quot;5&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Point_1&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Point_2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;18&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;20&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;52&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;15&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;22&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;...&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Note &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;: It is recommended that the output folder path should not have any subfolders and files.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#5500ff;&quot;&gt;For more information, refer the &lt;/span&gt;&lt;a href=&quot;../Documentation.html&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#5500ff;&quot;&gt;Documentation&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:8pt; color:#5500ff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>580</y>
+     <width>421</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>600</y>
+     <width>421</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>550</y>
+     <width>451</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>600</y>
+     <width>451</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_10</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>lineEdit_11</tabstop>
+  <tabstop>pushButton_12</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>pushButton_13</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>lineEdit_15</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>lineEdit_16</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>comboBox_11</tabstop>
+  <tabstop>comboBox_12</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>textEdit_1</tabstop>
+  <tabstop>tabWidget_2</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>tableWidget_2</tabstop>
+  <tabstop>pushButton_8</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
